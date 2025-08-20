@@ -19,13 +19,15 @@ export const MotivationSection = () => {
             outcomes for you.
           </Typography>
         </div>
-        <div className="flex justify-center gap-5 w-full ">
-          <Advantage text="Done-for-you execution (not advice or dashboards)" />
-          <Advantage text="Real growth outcomes, not vanity metrics" />
-        </div>
-        <div className="flex justify-center gap-5 w-full ">
-          <Advantage text="AI that adapts in real-time based on performance" />
-          <Advantage text="Human-in-the-loop where it matters" />
+        <div className="flex flex-col gap-5 justify-center items-center">
+          <div className="flex justify-center gap-5 w-full ">
+            <Advantage text="Done-for-you execution (not advice or dashboards)" />
+            <Advantage text="Real growth outcomes, not vanity metrics" />
+          </div>
+          <div className="flex justify-center gap-5 w-full ">
+            <Advantage text="AI that adapts in real-time based on performance" />
+            <Advantage text="Human-in-the-loop where it matters" />
+          </div>
         </div>
         <AIChat
           appearance="dark"

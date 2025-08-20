@@ -178,6 +178,10 @@ a {
   background: linear-gradient(to bottom, white, var(--color-slate-01));
 }
 
+.two-colors-background-reverse {
+  background: linear-gradient(to bottom, var(--color-slate-01), white );
+}
+
 .cards-shadow {
   box-shadow: 0px 2px 20px 0px #2B2B2B12;
 }

@@ -7,18 +7,18 @@ const typography = cva(
   {
     variants: {
       size: {
-        xl: 'text-6xl leading-[4rem]', // 64px / 64px
-        h1: 'text-5xl leading-[3.625rem]', // 48px / 58px
+        xl: 'text-[40px] leading-[3rem] md:text-6xl md:leading-[4rem]', // 64px / 64px
+        h1: 'text-[32px] leading-10 md:text-5xl md:leading-[3.625rem]', // 48px / 58px
         h2: 'text-[42px] leading-[3.125rem]', // 42px / 50px  
         h3: 'text-4xl leading-[2.75rem]', // 36px / 44px
-        h4: 'text-[32px] leading-10', // 32px / 40px
+        h4: 'text-2xl leading-8 md:text-[32px] md:leading-10', // 32px / 40px
         h5: 'text-[28px] leading-9', // 28px / 36px
-        h6: 'text-2xl leading-8', // 24px / 32px
+        h6: 'text-base leading-5 md:text-2xl md:leading-8', // 24px / 32px
         bodyXXL: 'text-[22px] leading-[1.625rem]', // 22px / 26px
         bodyXL: 'text-xl leading-6', // 20px / 24px
         bodyL: 'text-lg leading-[1.375rem]', // 18px / 22px
         body: 'text-base leading-5', // 16px / 20px
-        bodyS: 'text-sm leading-[1.125rem]', // 14px / 18px
+        bodyS: 'text-xs leading-4 md:text-sm md:leading-[1.125rem]', // 14px / 18px
         bodyXS: 'text-xs leading-4', // 12px / 16px
         bodyXXS: 'text-[10px] leading-[0.875rem]', // 10px / 14px
       },
@@ -51,16 +51,16 @@ const typography = cva(
         gray10: 'text-[var(--color-gray-10)]',
 
         // Slate (Bluish Gray)
-        slate01: 'text-[var(--color-slate-50)]',
-        slate02: 'text-[var(--color-slate-100)]',
-        slate03: 'text-[var(--color-slate-200)]',
-        slate04: 'text-[var(--color-slate-300)]',
-        slate05: 'text-[var(--color-slate-400)]',
-        slate06: 'text-[var(--color-slate-500)]',
-        slate07: 'text-[var(--color-slate-600)]',
-        slate08: 'text-[var(--color-slate-700)]',
-        slate09: 'text-[var(--color-slate-800)]',
-        slate10: 'text-[var(--color-slate-900)]',
+        slate01: 'text-[var(--color-slate-01)]',
+        slate02: 'text-[var(--color-slate-02)]',
+        slate03: 'text-[var(--color-slate-03)]',
+        slate04: 'text-[var(--color-slate-04)]',
+        slate05: 'text-[var(--color-slate-05)]',
+        slate06: 'text-[var(--color-slate-06)]',
+        slate07: 'text-[var(--color-slate-07)]',
+        slate08: 'text-[var(--color-slate-08)]',
+        slate09: 'text-[var(--color-slate-09)]',
+        slate10: 'text-[var(--color-slate-10)]',
 
         // Blue
         blue01: 'text-[var(--color-blue-01)]',
@@ -70,18 +70,18 @@ const typography = cva(
         blue05: 'text-[var(--color-blue-05)]',
 
         // Green
-        green01: 'text-[var(--color-green-50)]',
-        green02: 'text-[var(--color-green-100)]',
-        green03: 'text-[var(--color-green-200)]',
-        green04: 'text-[var(--color-green-300)]',
-        green05: 'text-[var(--color-green-400)]',
+        green01: 'text-[var(--color-green-01)]',
+        green02: 'text-[var(--color-green-02)]',
+        green03: 'text-[var(--color-green-03)]',
+        green04: 'text-[var(--color-green-04)]',
+        green05: 'text-[var(--color-green-05)]',
         
         // Yellow
-        yellow01: 'text-[var(--color-yellow-50)]',
-        yellow02: 'text-[var(--color-yellow-100)]',
-        yellow03: 'text-[var(--color-yellow-200)]',
-        yellow04: 'text-[var(--color-yellow-300)]',
-        yellow05: 'text-[var(--color-yellow-400)]',
+        yellow01: 'text-[var(--color-yellow-01)]',
+        yellow02: 'text-[var(--color-yellow-02)]',
+        yellow03: 'text-[var(--color-yellow-03)]',
+        yellow04: 'text-[var(--color-yellow-04)]',
+        yellow05: 'text-[var(--color-yellow-05)]',
         
         // Red
         red01: 'text-[var(--color-red-01)]',
@@ -91,25 +91,25 @@ const typography = cva(
         red05: 'text-[var(--color-red-05)]',
         
         // Purple
-        purple01: 'text-[var(--color-purple-50)]',
-        purple02: 'text-[var(--color-purple-100)]',
-        purple03: 'text-[var(--color-purple-200)]',
-        purple04: 'text-[var(--color-purple-300)]',
-        purple05: 'text-[var(--color-purple-400)]',
+        purple01: 'text-[var(--color-purple-01)]',
+        purple02: 'text-[var(--color-purple-02)]',
+        purple03: 'text-[var(--color-purple-03)]',
+        purple04: 'text-[var(--color-purple-04)]',
+        purple05: 'text-[var(--color-purple-05)]',
         
         // Pink
-        pink01: 'text-[var(--color-pink-50)]',
-        pink02: 'text-[var(--color-pink-100)]',
-        pink03: 'text-[var(--color-pink-200)]',
-        pink04: 'text-[var(--color-pink-300)]',
-        pink05: 'text-[var(--color-pink-400)]',
+        pink01: 'text-[var(--color-pink-01)]',
+        pink02: 'text-[var(--color-pink-02)]',
+        pink03: 'text-[var(--color-pink-03)]',
+        pink04: 'text-[var(--color-pink-04)]',
+        pink05: 'text-[var(--color-pink-05)]',
         
         // Orange
-        orange01: 'text-[var(--color-orange-50)]',
-        orange02: 'text-[var(--color-orange-100)]',
-        orange03: 'text-[var(--color-orange-200)]',
-        orange04: 'text-[var(--color-orange-300)]',
-        orange05: 'text-[var(--color-orange-400)]',
+        orange01: 'text-[var(--color-orange-01)]',
+        orange02: 'text-[var(--color-orange-02)]',
+        orange03: 'text-[var(--color-orange-03)]',
+        orange04: 'text-[var(--color-orange-04)]',
+        orange05: 'text-[var(--color-orange-05)]',
       },
     },
     defaultVariants: {
