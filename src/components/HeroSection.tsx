@@ -47,6 +47,7 @@ export const HeroSection = () => {
           growth with AI. No signup required.
         </Typography>
         <AIChat
+        showPills
           appearance="white"
           placeholder="What's our AI readiness score?"
         />

@@ -1,6 +1,7 @@
 import {ExamplesSection} from '@/components/ExamplesSection';
 import {ExplanationSection} from '@/components/ExplanationSection';
 import {FAQs} from '@/components/FAQs';
+import {FloatingChat} from '@/components/FloatingChat';
 import {Footer} from '@/components/Footer';
 import {GuaranteeSection} from '@/components/GuaranteeSection';
 import {HeroSection} from '@/components/HeroSection';
@@ -19,6 +20,7 @@ export default function Home() {
    <>
    <HeroSection />
    <MotivationSection />
+   <FloatingChat />
    <HowItWorksSection />
    <ExamplesSection />
    <IsRightForYouSection />
