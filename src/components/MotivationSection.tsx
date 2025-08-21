@@ -3,7 +3,7 @@ import { Typography, Advantage } from './ui'
 
 export const MotivationSection = () => {
   return (
-    <div className="py-40 px-5">
+    <div className="py-32 md:py-40 px-5">
       <div className="container flex flex-col gap-10 justify-center items-center">
         <div className="max-w-[720px] m-auto flex flex-col gap-10 justify-center items-center">
           <Typography as="h2" size="h1" weight="medium" className="text-center">

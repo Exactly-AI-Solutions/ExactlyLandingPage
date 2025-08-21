@@ -18,9 +18,9 @@ import {
 import { ReactNode } from 'react'
 
 export const RichInfoSection = () => (
-  <div className="px-5 py-60">
+  <div className="px-5 py-32 md:py-60">
     <div className="container flex flex-col gap-10 justify-center items-center">
-      <div className="w-[720px] m-auto text-center">
+      <div className="max-w-[720px] m-auto text-center">
         <Typography size="h1" weight="medium">
           Need a Chatbot That Feels Like{' '}
           <Typography as="span" size="h1" weight="medium" color="blue04">
@@ -28,13 +28,13 @@ export const RichInfoSection = () => (
           </Typography>
         </Typography>
       </div>
-      <div className="w-[720px] m-auto text-center">
+      <div className="max-w-[720px] m-auto text-center">
         <Typography color="slate07">
           Unlike our other services, our DFY chatbots are available immediately
           with simple monthly pricing.
         </Typography>
       </div>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="cards-shadow rounded-xl p-5 flex flex-col gap-10">
           <Image src="/girl.png" width={530} height={530} alt="girl" />
           <Typography size="h6" weight="semibold">
@@ -88,7 +88,7 @@ export const RichInfoSection = () => (
           </div>
         </div>
       </div>
-      <Card className="grid grid-cols-2 gap-10 p-10">
+      <Card className="grid grid-cols-1 md:grid-cols-2 gap-10 p-10">
         <div className="flex flex-col gap-5">
           <div className="flex gap-1 items-center">
             <div className="w-6 h-6">
@@ -116,9 +116,9 @@ export const RichInfoSection = () => (
           </Typography>
         </div>
       </Card>
-    <div className="flex justify-center gap-5">
-      <Button className="w-[390px]">Experience our chatbot</Button>
-      <Button hierarchy="primary-stroke" className="w-[390px]">
+    <div className="flex justify-center gap-5 flex-col md:flex-row">
+      <Button className="w-full md:w-[390px]">Experience our chatbot</Button>
+      <Button hierarchy="primary-stroke" className="w-full md:w-[390px]">
         Get Pricing for your Site
       </Button>
     </div>

@@ -2,7 +2,7 @@ import {Guarantee} from './ui/Guarantee'
 import { BagIcon, ChartIcon, MoneyIcon, TargetIcon, Typography } from './ui'
 
 export const GuaranteeSection = () => (
-  <div className="bg-slate-01 pt-60 pb-32 px-5">
+  <div className="bg-slate-01 pt-32 md:pt-60 pb-32 px-5">
     <div className="container flex flex-col gap-10 justify-center items-center">
       <div>
         <Typography as="h2" size="h1" weight="medium" className="text-center">
@@ -39,7 +39,7 @@ export const GuaranteeSection = () => (
       <Typography size="h6" weight="semibold" className="text-center">
         Our guarantee is simple:
       </Typography>
-      <div className="flex gap-5">
+      <div className="flex gap-5 flex-col md:flex-row">
         <Guarantee icon={<BagIcon width={24} height={24} />} text="We make clear, measurable promises for your business" />
         <Guarantee icon={<ChartIcon width={24} height={24} />} text="You pay just 20% upfront to get started" />
         <Guarantee icon={<TargetIcon width={24} height={24} />} text="The remaining 80% is due only if we deliver" />

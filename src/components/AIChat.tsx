@@ -10,10 +10,10 @@ interface Props {
 
 const wrapper = cva(
   [
-    'w-full',
+    'w-full max-w-full',
     'p-4 pl-8',
     'flex items-center justify-between gap-5',
-    'rounded-full border-1',
+    'rounded-full border-1',    
   ],
   {
     variants: {
@@ -35,6 +35,7 @@ const textInput = cva(
     'text-sm leading-[1.125rem]',
     'md:text-xl md:leading-6',
     'focus:outline-none',
+    'shrink-1 text-ellipsis'
   ],
   {
     variants: {
@@ -58,8 +59,13 @@ const pills = [
 ]
 
 export const AIChat = ({ appearance, placeholder, showPills }: Props) => (
-  <div className="container flex flex-col gap-6">
-    <div className={clsx(wrapper({ appearance }), 'input-background')}>
+  <div className="container flex flex-col gap-6 p-0!">
+    <div
+      className={clsx(
+        wrapper({ appearance }),
+        'input-background'
+      )}
+    >
       <input className={textInput({ appearance })} placeholder={placeholder} />
       <Button hierarchy="accented-bold">Ask</Button>
     </div>

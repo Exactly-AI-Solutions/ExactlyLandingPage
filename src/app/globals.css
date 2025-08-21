@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -8,11 +8,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   /* Font Family */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
-  
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Consolas,
+    'Liberation Mono', Menlo, monospace;
+
   /* Font Sizes */
   --font-size-h1: 3rem; /* 48px */
   --font-size-h2: 2.625rem; /* 42px */
@@ -28,7 +29,7 @@
   --font-size-body-xs: 0.75rem; /* 12px */
   --font-size-body-xxs: 0.625rem; /* 10px */
   --font-size-caption: 0.75rem; /* 12px - for tooltips */
-  
+
   /* Line Heights */
   --line-height-h1: 3.625rem; /* 58px */
   --line-height-h2: 3.125rem; /* 50px */
@@ -44,90 +45,90 @@
   --line-height-body-xs: 1rem; /* 16px */
   --line-height-body-xxs: 0.875rem; /* 14px */
   --line-height-caption: 1rem; /* 16px - for tooltips */
-  
+
   /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  
+
   /* White and Black */
   --color-white: #ffffff;
   --color-black: #000000;
-  
+
   /* Bluish Gray */
-  --color-slate-01: #F9FAFD;
-  --color-slate-02: #F2F4F9;
-  --color-slate-03: #E9EBF3;
-  --color-slate-04: #DDDFE7;
-  --color-slate-05: #CACEDE;
-  --color-slate-06: #ABB0C2;
-  --color-slate-07: #787E94;
-  --color-slate-08: #5C6177;
-  --color-slate-09: #3A3F53;
-  --color-slate-10: #181C30;
-  
+  --color-slate-01: #f9fafd;
+  --color-slate-02: #f2f4f9;
+  --color-slate-03: #e9ebf3;
+  --color-slate-04: #dddfe7;
+  --color-slate-05: #cacede;
+  --color-slate-06: #abb0c2;
+  --color-slate-07: #787e94;
+  --color-slate-08: #5c6177;
+  --color-slate-09: #3a3f53;
+  --color-slate-10: #181c30;
+
   /* Gray Scale */
-  --color-gray-01: #FCFCFC;
-  --color-gray-02: #F7F7F7;
-  --color-gray-03: #F1F1F1;
-  --color-gray-04: #E9E9E9;
-  --color-gray-05: #E0E0E0;
-  --color-gray-06: #C0C0C0;
+  --color-gray-01: #fcfcfc;
+  --color-gray-02: #f7f7f7;
+  --color-gray-03: #f1f1f1;
+  --color-gray-04: #e9e9e9;
+  --color-gray-05: #e0e0e0;
+  --color-gray-06: #c0c0c0;
   --color-gray-07: #959595;
-  --color-gray-08: #6F6F6F;
+  --color-gray-08: #6f6f6f;
   --color-gray-09: #474747;
-  --color-gray-10: #2B2B2B;
+  --color-gray-10: #2b2b2b;
 
   /* Blue */
-  --color-blue-01: #F4F9FF;
-  --color-blue-02: #DEEFFF;
-  --color-blue-03: #83C0FF;
-  --color-blue-04: #2D94FF;
-  --color-blue-05: #006FE3; 
-  
+  --color-blue-01: #f4f9ff;
+  --color-blue-02: #deefff;
+  --color-blue-03: #83c0ff;
+  --color-blue-04: #2d94ff;
+  --color-blue-05: #006fe3;
+
   /* Green */
-  --color-green-01: #EBF9F0;
-  --color-green-02: #B1E7C2;
-  --color-green-03: #6FD690;
-  --color-green-04: #42C66B;
-  --color-green-05: #18AC47;
-  
+  --color-green-01: #ebf9f0;
+  --color-green-02: #b1e7c2;
+  --color-green-03: #6fd690;
+  --color-green-04: #42c66b;
+  --color-green-05: #18ac47;
+
   /* Yellow */
-  --color-yellow-01: #FFFCE9;
-  --color-yellow-02: #FFF4B9;
-  --color-yellow-03: #FFEB82;
-  --color-yellow-04: #FDDA21;
-  --color-yellow-05: #F1CB00;
-  --color-yellow-06: #FFB300;
-  
+  --color-yellow-01: #fffce9;
+  --color-yellow-02: #fff4b9;
+  --color-yellow-03: #ffeb82;
+  --color-yellow-04: #fdda21;
+  --color-yellow-05: #f1cb00;
+  --color-yellow-06: #ffb300;
+
   /* Red */
-  --color-red-01: #FFF4F3;
-  --color-red-02: #FFDEDC;
-  --color-red-03: #FFA09A;
-  --color-red-04: #FF7169;
-  --color-red-05: #F94D43;
-  
+  --color-red-01: #fff4f3;
+  --color-red-02: #ffdedc;
+  --color-red-03: #ffa09a;
+  --color-red-04: #ff7169;
+  --color-red-05: #f94d43;
+
   /* Purple */
-  --color-purple-01: #F4F2FF;
-  --color-purple-02: #E3DDFF;
-  --color-purple-03: #BF71F4;
-  --color-purple-04: #A137EA;
-  --color-purple-05: #890FDD;
-  
+  --color-purple-01: #f4f2ff;
+  --color-purple-02: #e3ddff;
+  --color-purple-03: #bf71f4;
+  --color-purple-04: #a137ea;
+  --color-purple-05: #890fdd;
+
   /* Pink */
-  --color-pink-01: #FBEFF4;
-  --color-pink-02: #F5D6E4;
-  --color-pink-03: #F680B7;
-  --color-pink-04: #E62881;
-  --color-pink-05: #BF1263;
-  
+  --color-pink-01: #fbeff4;
+  --color-pink-02: #f5d6e4;
+  --color-pink-03: #f680b7;
+  --color-pink-04: #e62881;
+  --color-pink-05: #bf1263;
+
   /* Orange */
-  --color-orange-01: #FFF5E8;
-  --color-orange-02: #FFE5C6;
-  --color-orange-03: #FFC682;
-  --color-orange-04: #FFA337;
-  --color-orange-05: #FF8A00;
+  --color-orange-01: #fff5e8;
+  --color-orange-02: #ffe5c6;
+  --color-orange-03: #ffc682;
+  --color-orange-04: #ffa337;
+  --color-orange-05: #ff8a00;
 }
 
 @media (prefers-color-scheme: light) {
@@ -146,7 +147,6 @@ body {
   font-weight: var(--font-weight-regular);
 }
 
-
 a {
   color: inherit;
   text-decoration: none;
@@ -158,7 +158,12 @@ a {
 }
 
 .background-gradient {
-  background: linear-gradient(114.5deg, #0F3C6C 0.95%, #114574 52.35%, #247389 103.75%);
+  background: linear-gradient(
+    114.5deg,
+    #0f3c6c 0.95%,
+    #114574 52.35%,
+    #247389 103.75%
+  );
 }
 
 .header-background {
@@ -172,6 +177,10 @@ a {
 .container {
   max-width: 1180px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 1.25rem;
+  }
 }
 
 .two-colors-background {
@@ -179,13 +188,13 @@ a {
 }
 
 .two-colors-background-reverse {
-  background: linear-gradient(to bottom, var(--color-slate-01), white );
+  background: linear-gradient(to bottom, var(--color-slate-01), white);
 }
 
 .cards-shadow {
-  box-shadow: 0px 2px 20px 0px #2B2B2B12;
+  box-shadow: 0px 2px 20px 0px #2b2b2b12;
 }
 
 .example-card-clamp {
-  max-width: clamp(300px, 30%, 380px)
+  max-width: clamp(300px, 30%, 380px);
 }

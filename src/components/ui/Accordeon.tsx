@@ -22,14 +22,20 @@ export const Accordeon = ({ question, answer }: Props) => {
   }, [isOpen])
 
   return (
-    <div className="rounded-lg p-5 flex flex-col gap-5 bg-white" onClick={() => setIsOpen((prev) => !prev)}>
-      <div
-        className="flex gap-5 justify-between"
-      >
+    <div
+      className="rounded-lg p-5 flex flex-col gap-5 bg-white"
+      onClick={() => setIsOpen((prev) => !prev)}
+    >
+      <div className="flex gap-5 justify-between">
         <Typography size="bodyXL" weight="medium">
           {question}
         </Typography>
-        <div className={clsx(isOpen ? "rotate-270" : "rotate-90")}>
+        <div
+          className={clsx(
+            'w-[9px] h-[16px]',
+            isOpen ? 'rotate-270' : 'rotate-90'
+          )}
+        >
           <ChevronIcon width={9} height={16} />
         </div>
       </div>
@@ -37,7 +43,7 @@ export const Accordeon = ({ question, answer }: Props) => {
         className="overflow-hidden transition-all duration-300 ease-in-out"
         style={{ height: `${height}px` }}
       >
-        <div ref={contentRef} className='text-left'>
+        <div ref={contentRef} className="text-left">
           <Typography size="body" color="slate07">
             {answer}
           </Typography>

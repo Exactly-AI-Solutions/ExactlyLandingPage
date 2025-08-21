@@ -4,9 +4,11 @@ import { Input } from './ui/Input'
 
 export const Footer = () => (
   <div className="pt-32 px-5 pb-10">
-    <div className="container flex gap-10">
+    <div className="container flex gap-10 flex-col md:flex-row">
       <div className="flex flex-col gap-5">
-        <Logo width={320} height={56} fill="black" />
+        <div className="w-[230px] md:w-[320px]">
+          <Logo  fill="black" />
+        </div>
         <Typography size="bodyXL" color="slate07">
           Fully-managed AI servises with guaranteed results. Exactly how your
           business needs them
@@ -17,7 +19,7 @@ export const Footer = () => (
           <PhoneCallIcon width={32} height={32} fill="var(--color-blue-04)" />
         </div>
       </div>
-      <div className="flex flex-col gap-5">
+      <div className="flex md:flex-col gap-5">
         <Typography size="h6" color="blue04" weight="semibold">
           Explore
         </Typography>
@@ -41,14 +43,20 @@ export const Footer = () => (
         </Button>
       </form>
     </div>
-    <div className='border-t-1 border-slate-05 pt-4 flex gap-4 justify-between mt-10'>
-      <Typography color='slate07'>Copyright © 2025 Exactly AI Solutions</Typography>
-      <div className='flex justify-end gap-5'>
-      <Typography color='slate07'>Cookie Policy</Typography>
-      <Typography color='slate07' className='mx-2'>|</Typography>
-        <Typography color='slate07'>Privacy Policy</Typography>
-        <Typography color='slate07' className='mx-2'>|</Typography>
-        <Typography color='slate07'>Terms of Service</Typography>
+    <div className="border-t-1 border-slate-05 pt-4 flex flex-col md:flex-row gap-4 items-center justify-between mt-10">
+      <Typography color="slate07">
+        Copyright © 2025 Exactly AI Solutions
+      </Typography>
+      <div className="flex justify-end gap-5">
+        <Typography color="slate07">Cookie Policy</Typography>
+        <Typography color="slate07" className="mx-2">
+          |
+        </Typography>
+        <Typography color="slate07">Privacy Policy</Typography>
+        <Typography color="slate07" className="mx-2">
+          |
+        </Typography>
+        <Typography color="slate07">Terms of Service</Typography>
       </div>
     </div>
   </div>
