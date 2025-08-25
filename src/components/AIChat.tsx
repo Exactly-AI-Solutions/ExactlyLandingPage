@@ -1,5 +1,9 @@
+'use client'
+
 import { cva } from 'class-variance-authority'
 import { Button, Typography } from './ui'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 interface Props {
   appearance: 'white' | 'dark'
@@ -57,22 +61,38 @@ const pills = [
   'Run Marketing Audit',
 ]
 
-export const AIChat = ({ appearance, placeholder, showPills }: Props) => (
-  <div className="container flex flex-col gap-6 p-0!">
-    <div className={wrapper({ appearance })}>
-      <input className={textInput({ appearance })} placeholder={placeholder} />
-      <Button hierarchy="accented-bold">Ask</Button>
-    </div>
-    {showPills ? (
-      <div className="flex gap-2 md:gap-6 flex-wrap">
-        {pills.map((pill) => (
-          <div className="bg-[#E5E5E5] px-4 py-2 rounded-full text-center">
-            <Typography size="bodyS" weight="semibold">
-              {pill}
-            </Typography>
-          </div>
-        ))}
+export const AIChat = ({ appearance, placeholder, showPills }: Props) => {
+  const [inputText, setInputText] = useState('')
+  const router = useRouter()
+
+  const handleClick = () => {
+    router.push(`/chat?message=${inputText}`)
+  }
+
+  return (
+    <div className="container flex flex-col gap-6 p-0!">
+      <div className={wrapper({ appearance })}>
+        <input
+          value={inputText}
+          onChange={({ target: { value } }) => setInputText(value)}
+          className={textInput({ appearance })}
+          placeholder={placeholder}
+        />
+        <Button hierarchy="accented-bold" onClick={handleClick}>
+          Ask
+        </Button>
       </div>
-    ) : null}
-  </div>
-)
+      {showPills ? (
+        <div className="flex gap-2 md:gap-6 flex-wrap">
+          {pills.map((pill) => (
+            <div className="bg-[#E5E5E5] px-4 py-2 rounded-full text-center">
+              <Typography size="bodyS" weight="semibold">
+                {pill}
+              </Typography>
+            </div>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  )
+}
