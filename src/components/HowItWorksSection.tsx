@@ -12,7 +12,7 @@ export const HowItWorksSection = () => (
           best to use it. We build real agentic workflows that drive growth
         </Typography>
       </div>
-    <div className='flex justify-center items-stretch gap-5 flex-wrap'>
+    <div className='flex justify-center items-stretch gap-5 flex-col md:flex-row'>
         <Step
           stepNumber={1}
           title="Analysis & Setup"

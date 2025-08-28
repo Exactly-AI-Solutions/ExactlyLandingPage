@@ -5,7 +5,7 @@ export const QualificationCheck = () => (
   <div className="two-colors-background p-5">
     <Card className="grid gap-10 grid-cols-1 md:grid-cols-2 py-5!">
       <Image src="/robot.png" width={460} height={460} alt="robot" />
-      <div className="p-5 flex flex-col gap-10 w-full">
+      <div className="flex flex-col gap-10 w-full">
         <Typography as="h6" size="h6" weight="semibold">
           Quick Qualification Check
         </Typography>
@@ -21,7 +21,7 @@ export const QualificationCheck = () => (
             If you mentally checked all (or most) of the above, maybe we should
             talk.
           </Typography>
-          <Button>Book a Consultation</Button>
+          <Button className='w-full md:w-max'>Book a Consultation</Button>
         </div>
       </div>
     </Card>

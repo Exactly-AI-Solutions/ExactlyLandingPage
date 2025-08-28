@@ -4,11 +4,13 @@ import { cva } from 'class-variance-authority'
 import { Button, Typography } from './ui'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import clsx from 'clsx'
 
 interface Props {
   appearance: 'white' | 'dark'
   placeholder: string
   showPills?: boolean
+  className?: string
 }
 
 const wrapper = cva(
@@ -61,7 +63,7 @@ const pills = [
   'Run Marketing Audit',
 ]
 
-export const AIChat = ({ appearance, placeholder, showPills }: Props) => {
+export const AIChat = ({ appearance, placeholder, showPills, className }: Props) => {
   const [inputText, setInputText] = useState('')
   const router = useRouter()
 
@@ -70,7 +72,7 @@ export const AIChat = ({ appearance, placeholder, showPills }: Props) => {
   }
 
   return (
-    <div className="container flex flex-col gap-6 p-0!">
+    <div className={clsx("container flex flex-col gap-6 p-0!", className)}>
       <div className={wrapper({ appearance })}>
         <input
           value={inputText}
@@ -83,7 +85,7 @@ export const AIChat = ({ appearance, placeholder, showPills }: Props) => {
         </Button>
       </div>
       {showPills ? (
-        <div className="flex gap-2 md:gap-6 flex-wrap">
+        <div className="flex gap-2 md:gap-6 flex-wrap items-center justify-center">
           {pills.map((pill) => (
             <div className="bg-[#E5E5E5] px-4 py-2 rounded-full text-center">
               <Typography size="bodyS" weight="semibold">
