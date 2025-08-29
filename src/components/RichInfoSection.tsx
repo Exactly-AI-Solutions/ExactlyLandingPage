@@ -10,9 +10,7 @@ import {
   FilterIcon,
   MeetingIcon,
   MessagesIcon,
-  PriceIcon,
   ThinkingIcon,
-  TimeIcon,
   ToolsIcon,
   Typography,
 } from './ui'

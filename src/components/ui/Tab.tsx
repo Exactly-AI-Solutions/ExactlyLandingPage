@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react'
+import React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { clsx } from 'clsx'
 
@@ -24,12 +24,13 @@ const tab = cva(
           'hover:text-blue-04 hover:border-blue-04',
         ],
 
-        filled: ['rounded-full', 'border border-transparent', 'bg-slate-03', 'hover:bg-blue-04 hover:text-white'],
-        dot: [
-          'bg-transparent',
-          'rounded-md',
-          'hover:text-blue-04',
+        filled: [
+          'rounded-full',
+          'border border-transparent',
+          'bg-slate-03',
+          'hover:bg-blue-04 hover:text-white',
         ],
+        dot: ['bg-transparent', 'rounded-md', 'hover:text-blue-04'],
       },
       disabled: {
         true: ['text-slate-06!', 'cursor-not-allowed', 'pointer-events-none'],
@@ -84,10 +85,7 @@ const dotIndicator = cva(
     compoundVariants: [
       {
         appearance: 'dot',
-        class: [
-          'group-hover:bg-blue-04',
-          'transition-all duration-200',
-        ],
+        class: ['group-hover:bg-blue-04', 'transition-all duration-200'],
       },
     ],
   }
@@ -110,17 +108,12 @@ export const Tab: React.FC<TabProps> = ({
   children,
   leftIcon,
   rightIcon,
-  active,
   disabled,
   ...props
 }) => {
-
   return (
     <button
-      className={clsx(
-        tab({ appearance, disabled }),
-        className, "group"
-      )}
+      className={clsx(tab({ appearance, disabled }), className, 'group')}
       disabled={disabled || undefined}
       {...props}
     >
@@ -128,9 +121,7 @@ export const Tab: React.FC<TabProps> = ({
       <span>{children}</span>
       {rightIcon && <span className="flex-shrink-0">{rightIcon}</span>}
 
-      <span
-        className={dotIndicator({ appearance, disabled })}
-      />
+      <span className={dotIndicator({ appearance, disabled })} />
     </button>
   )
 }

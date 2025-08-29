@@ -1,5 +1,4 @@
-import logo from '@/assets/logo.svg'
-import Image from 'next/image'
+import Link from 'next/link'
 import { Button, Logo, LogoSmall, Typography } from './ui'
 
 export const Header = () => (
@@ -9,25 +8,25 @@ export const Header = () => (
     <nav className='hidden md:block'>
       <ul className="flex items-center justify-center gap-8">
         <li>
-          <a href="/">
+          <Link href="/">
             <Typography size="bodyXL" color="white">
               Why
             </Typography>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/">
+          <Link href="/">
             <Typography size="bodyXL" color="white">
               What
             </Typography>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/">
+          <Link href="/">
             <Typography size="bodyXL" color="white">
               How
             </Typography>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

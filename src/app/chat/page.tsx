@@ -1,5 +1,10 @@
 import { ChatLayout } from '@/components/ChatLayout'
+import { Suspense } from 'react'
 
 export default function ChatPage() {
-  return <ChatLayout />
+  return (
+    <Suspense>
+      <ChatLayout />
+    </Suspense>
+  )
 }

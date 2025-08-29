@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^14.2.15",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@svgr/webpack": "^8.1.0",
     "class-variance-authority": "^0.7.1",

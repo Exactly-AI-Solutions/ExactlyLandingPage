@@ -87,7 +87,7 @@ export const AIChat = ({ appearance, placeholder, showPills, className }: Props)
       {showPills ? (
         <div className="flex gap-2 md:gap-6 flex-wrap items-center justify-center">
           {pills.map((pill) => (
-            <div className="bg-[#E5E5E5] px-4 py-2 rounded-full text-center">
+            <div key={pill} className="bg-[#E5E5E5] px-4 py-2 rounded-full text-center">
               <Typography size="bodyS" weight="semibold">
                 {pill}
               </Typography>

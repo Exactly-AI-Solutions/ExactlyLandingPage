@@ -12,9 +12,9 @@ export const IsRightForYouSection = () => (
         className="text-center mt-10"
         color="slate07"
       >
-        We're built for growing B2B companies doing $10M-$1B in revenue, or
-        funded startups with serious growth potential. If you're trying to scale
-        without bloating your team, we're your secret weapon.
+        We&apos;re built for growing B2B companies doing $10M-$1B in revenue, or
+        funded startups with serious growth potential. If you&apos;re trying to scale
+        without bloating your team, we&apos;re your secret weapon.
       </Typography>
     </div>
   </div>

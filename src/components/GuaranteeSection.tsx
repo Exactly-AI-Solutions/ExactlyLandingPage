@@ -15,7 +15,7 @@ export const GuaranteeSection = () => (
           className="text-center mb-10"
           color="blue04"
         >
-          (And Why Others Don't)
+          (And Why Others Don&apos;t)
         </Typography>
       </div>
       <div className="max-w-[720px] m-auto">
@@ -25,14 +25,14 @@ export const GuaranteeSection = () => (
           className="text-center"
           color="slate07"
         >
-          Most AI companies won't guarantee outcomes because they can't control
-          them. They sell tools, advice, or "best practices" — then hope for the
+          Most AI companies won&apos;t guarantee outcomes because they can&apos;t control
+          them. They sell tools, advice, or &ldquo;best practices&ldquo; — then hope for the
           best.
         </Typography>
       </div>
       <div className="max-w-[720px] m-auto">
         <Typography size="body" weight="regular" className="text-center">
-          We're different. We don't just implement AI — we operate it, optimize
+          We&apos;re different. We don&apos;t just implement AI — we operate it, optimize
           it, and own the results.
         </Typography>
       </div>
