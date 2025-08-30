@@ -1,0 +1,1 @@
+export const getImageUrl = (imagePath: string): string => `${process.env.NEXT_PUBLIC_STRAPI_URL || ''}${imagePath}`

@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  images: {
+    domains: ['127.0.0.1'],
+  },
   webpack(config) {
     // Find the existing rule that handles SVG files and modify it
     const fileLoaderRule = config.module.rules.find((rule: any) =>
@@ -26,7 +29,9 @@ const nextConfig: NextConfig = {
       {
         test: /\.svg$/i,
         issuer: fileLoaderRule?.issuer,
-        resourceQuery: { not: [...(fileLoaderRule?.resourceQuery?.not || []), /url/] }, // exclude if *.svg?url
+        resourceQuery: {
+          not: [...(fileLoaderRule?.resourceQuery?.not || []), /url/],
+        }, // exclude if *.svg?url
         use: [
           {
             loader: '@svgr/webpack',

@@ -198,3 +198,67 @@ a {
 .example-card-clamp {
   max-width: clamp(300px, 30%, 380px);
 }
+
+.content-parser {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  blockquote {
+    border-left: 4px solid #eee;
+    padding-left: 1rem;
+    color: #555;
+  }
+
+  ul,
+  ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin: 0.25rem 0;
+  }
+}
