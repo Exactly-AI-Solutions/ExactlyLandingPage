@@ -3,7 +3,7 @@ import { Button, Typography } from './ui'
 import { Input } from './ui/Input'
 
 export const Footer = () => (
-  <div className="pt-32 px-5 pb-10">
+  <div className="pt-32 md:px-5 pb-10">
     <div className="container flex gap-10 flex-col md:flex-row">
       <div className="flex flex-col gap-5">
         <div className="w-[230px] md:w-[320px]">
@@ -43,7 +43,7 @@ export const Footer = () => (
         </Button>
       </form>
     </div>
-    <div className="border-t-1 border-slate-05 pt-4 flex flex-col md:flex-row gap-4 items-center justify-between mt-10">
+    <div className="border-t-1 border-slate-05 pt-4 flex flex-col md:flex-row gap-4 items-center justify-between mt-10 px-5">
       <Typography color="slate07">
         Copyright © 2025 Exactly AI Solutions
       </Typography>

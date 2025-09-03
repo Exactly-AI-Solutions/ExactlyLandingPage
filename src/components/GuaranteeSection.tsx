@@ -2,7 +2,7 @@ import {Guarantee} from './ui/Guarantee'
 import { BagIcon, ChartIcon, MoneyIcon, TargetIcon, Typography } from './ui'
 
 export const GuaranteeSection = () => (
-  <div className="bg-slate-01 pt-32 md:pt-60 pb-32 px-5">
+  <div className="bg-slate-01 pt-32 md:pt-60 pb-32 md:px-5">
     <div className="container flex flex-col gap-10 justify-center items-center">
       <div>
         <Typography as="h2" size="h1" weight="medium" className="text-center">

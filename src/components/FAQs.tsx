@@ -2,7 +2,7 @@ import { Typography } from './ui'
 import { Accordeon } from './ui/Accordeon'
 
 export const FAQs = () => (
-  <div className="bg-slate-01 pt-32 md:pt-60 px-5">
+  <div className="bg-slate-01 pt-32 md:pt-60 md:px-5">
     <div className="container text-center">
       <Typography as="h2" size="h1" weight="medium" className="mb-10">
         Frequently Asked Questions

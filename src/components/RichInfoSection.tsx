@@ -17,7 +17,7 @@ import {
 import { ReactNode } from 'react'
 
 export const RichInfoSection = () => (
-  <div className="px-5 py-32 md:py-60">
+  <div className="md:px-5 py-32 md:py-60">
     <div className="container flex flex-col gap-10 justify-center items-center">
       <div className="max-w-[720px] m-auto text-center">
         <Typography size="h1" weight="medium">
