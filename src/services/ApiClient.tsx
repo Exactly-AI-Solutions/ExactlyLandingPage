@@ -21,7 +21,7 @@ class APIClient {
     return response.json()
   }
 
-  async post(endpoint: string, data: any) {
+  async post(endpoint: string, data: object) {
     const response = await fetch(`${this.baseUrl}/api${endpoint}`, {
       method: 'POST',
       headers: {
