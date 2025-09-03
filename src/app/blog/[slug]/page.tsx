@@ -1,7 +1,7 @@
-import { ContentParser } from '@/components/ContentParser/ContentParser'
-import { getBlogPostBySlug } from '@/services/ApiClient'
-import { getImageUrl } from '@/services/getImageUrl'
-import Image from 'next/image'
+// import { ContentParser } from '@/components/ContentParser/ContentParser'
+// import { getBlogPostBySlug } from '@/services/ApiClient'
+// import { getImageUrl } from '@/services/getImageUrl'
+// import Image from 'next/image'
 
 export default async function BlogPostPage({
   params,
@@ -9,11 +9,11 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>
 }) {
   const param = await params
-  const post = await getBlogPostBySlug(param.slug)
+  // const post = await getBlogPostBySlug(param.slug)
 
   return (
     <div>
-      <h1>{post.title}</h1>
+      {/* <h1>{post.title}</h1>
       <small>{post.date}</small>
       <small>{post.author?.name}</small>
       <Image
@@ -22,7 +22,7 @@ export default async function BlogPostPage({
         width={600}
         height={400}
       />
-      <ContentParser content={post.content} />
+      <ContentParser content={post.content} /> */}
     </div>
   )
 }
