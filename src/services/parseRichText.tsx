@@ -19,12 +19,17 @@ export const parseRichText = (content: IContentBlock[]): ReactNode => {
         return (
           <Fragment key={index}>
             {block.children.map(
-              ({ text, bold, italic, strikethrough, type, url }) => {
+              ({ text, bold, italic, strikethrough, type, url }, index) => {
                 if (type === 'link' && url) {
-                  return <Link href={url}>{text}</Link>
+                  return (
+                    <Link key={url} href={url}>
+                      {text}
+                    </Link>
+                  )
                 }
                 return (
                   <p
+                    key={`text-${index}`}
                     className={clsx(
                       bold ? 'font-bold' : 'font-normal',
                       italic ? 'italic' : '',

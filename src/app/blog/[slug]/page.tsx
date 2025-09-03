@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
   const param = await params
   const post = await getBlogPostBySlug(param.slug)
