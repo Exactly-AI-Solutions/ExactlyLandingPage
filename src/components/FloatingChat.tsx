@@ -8,15 +8,20 @@ export const FloatingChat = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const twoScreens = window.innerHeight
+      const screenHeight = window.innerHeight
       const scrollPosition = window.scrollY
+      const pageHeight = document.body.scrollHeight
+      const bottomOffset = 800
 
-      setIsVisible(scrollPosition > twoScreens)
+      const scrolledPastScreen = scrollPosition > screenHeight
+      const nearBottom =
+        scrollPosition + screenHeight >= pageHeight - bottomOffset
+
+      setIsVisible(scrolledPastScreen && !nearBottom)
     }
 
     window.addEventListener('scroll', handleScroll)
 
-    // Cleanup
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
