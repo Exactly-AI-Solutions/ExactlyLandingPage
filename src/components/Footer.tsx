@@ -4,10 +4,10 @@ import { Input } from './ui/Input'
 
 export const Footer = () => (
   <div className="pt-32 md:px-5 pb-10">
-    <div className="container flex gap-10 flex-col md:flex-row">
-      <div className="flex flex-col gap-5">
+    <div className="container flex gap-10 flex-col md:flex-row justify-between max-w-[1180px] m-auto">
+      <div className="flex flex-col gap-5 max-w-[366px]">
         <div className="w-[230px] md:w-[320px]">
-          <Logo  fill="black" />
+          <Logo fill="black" />
         </div>
         <Typography size="bodyXL" color="slate07">
           Fully-managed AI servises with guaranteed results. Exactly how your
@@ -33,7 +33,7 @@ export const Footer = () => (
           HOW
         </Typography>
       </div>
-      <form className="flex flex-col gap-5 w-full">
+      <form className="flex flex-col gap-5 w-full max-w-[366px]">
         <Typography size="h6" color="blue04" weight="semibold">
           Stay Connected
         </Typography>
@@ -43,7 +43,7 @@ export const Footer = () => (
         </Button>
       </form>
     </div>
-    <div className="border-t-1 border-slate-05 pt-4 flex flex-col md:flex-row gap-4 items-center justify-between mt-10 px-5">
+    <div className="border-t-1 border-slate-05 pt-4 flex flex-col md:flex-row gap-4 items-center justify-between mt-10 px-5  max-w-[1180px] m-auto">
       <Typography color="slate07">
         Copyright © 2025 Exactly AI Solutions
       </Typography>

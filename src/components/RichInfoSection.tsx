@@ -41,7 +41,7 @@ export const RichInfoSection = () => (
       </div>
       <div className="flex flex-col gap-10">
         <div className="cards-shadow rounded-xl p-5 flex flex-col md:flex-row gap-10 w-full">
-          <div className="relative w-full min-w-[300px] max-w-[530px] aspect-square">
+          <div className="relative w-full min-w-[300px] max-w-[530px] aspect-square rounded-xl overflow-hidden">
             <Image
               src="/girl.png"
               layout="responsive"
@@ -121,8 +121,8 @@ export const RichInfoSection = () => (
         </Typography>
       </Card>
       <div className="flex justify-center gap-5 flex-col w-full">
-        <Button className="w-full md:w-[400px]">Find out more</Button>
-        <Button hierarchy="primary-stroke" className="w-full md:w-[400px]">
+        <Button className="w-full md:w-[400px] m-auto">Find out more</Button>
+        <Button hierarchy="primary-stroke" className="w-full md:w-[400px] m-auto">
           Talk to our chatbot
         </Button>
       </div>
@@ -132,8 +132,8 @@ export const RichInfoSection = () => (
 
 const InfoCard = ({ icon, text }: { icon: ReactNode; text: string }) => (
   <div className="flex gap-4 border-1 rounded-lg border-slate-02 p-4 items-center w-full">
-    <div className="w-6 h-6 grow-1">{icon}</div>
-    <Typography weight="medium" color="slate07">
+    <div className="w-6 h-6 min-w-6 min-h-6">{icon}</div>
+    <Typography weight="medium">
       {text}
     </Typography>
   </div>

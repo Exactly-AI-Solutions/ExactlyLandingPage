@@ -16,12 +16,14 @@ export const QualificationCheck = () => (
           <Advantage text="Believe AI is the future but need execution help?" />
           <Advantage text="Tired of tools that promise everything and deliver little?" />
         </div>
-        <div className="flex gap-5 flex-col md:flex-row">
+        <div className="flex gap-5 flex-col md:flex-row items-center">
           <Typography size="body" color="slate07" weight="regular">
             If you mentally checked all (or most) of the above, maybe we should
             talk.
           </Typography>
-          <Button className='w-full md:w-max'>Book a Consultation</Button>
+          <Button size="large" className="w-full md:w-max grow shrink-0 height-[48px]">
+            Book a Consultation
+          </Button>
         </div>
       </div>
     </Card>
