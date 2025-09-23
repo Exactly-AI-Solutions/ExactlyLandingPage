@@ -1,24 +1,36 @@
-import {getImageUrl} from '@/services/getImageUrl'
 import { IPost } from '@/types/Post'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Typography } from './ui'
 
 export const PostPreview = ({ post }: { post: IPost }) => (
   <Link href={`/blog/${post.slug}`}>
-      <div className="flex gap-5 p-5">
+    <div className="flex flex-col h-full gap-4 p-5 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow">
+      <div className="rounded-lg w-full aspect-[7/5] overflow-hidden relative object-cover">
         <Image
-          src={getImageUrl(post.preview?.formats.medium.url)}
+          src={post.preview?.url}
           alt={post.title}
-          width={150}
-          height={150}
-          className="object-cover"
+          fill
+          objectFit='cover'
         />
-        <div>
-          <h2>{post.title}</h2>
-          <small>{post.date}</small>
-          <p>{post.description}</p>
-          <small>{post.author?.name}</small>
-        </div>
       </div>
+
+      <div className="flex justify-between gap-4">
+        <Typography size="bodyS" color="slate07">
+          {`${post?.readTime ?? 5} min read`}
+        </Typography>
+        <Typography size="bodyS" color="slate07">
+          {post.date}
+        </Typography>
+      </div>
+
+      <Typography size="bodyXL" weight="semibold" color="slate10">
+        {post.title}
+      </Typography>
+
+      <Typography size="body" color="slate07">
+        {post.description}
+      </Typography>
+    </div>
   </Link>
 )

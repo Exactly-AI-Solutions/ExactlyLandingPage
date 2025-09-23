@@ -1,15 +1,24 @@
-// import { PostPreview } from '@/components/PostPreview'
-// import { getBlogPosts } from '@/services/ApiClient'
+import { PostPreview } from '@/components/PostPreview'
+import { getBlogPosts } from '@/services/ApiClient'
+
+import { Typography } from '@/components/ui'
 
 export default async function BlogPage() {
-  // const posts = await getBlogPosts()
-  // console.log(posts)
+  const posts = await getBlogPosts()
 
   return (
-    <div className="w-full flex flex-col gap-5">
-      {/* {posts.data.map((post) => (
-        <PostPreview key={post.id} post={post} />
-      ))} */}
+    <div className="container bg-white cards-shadow rounded-xl px-5 py-5! flex flex-col gap-5 justify-center">
+      <Typography as="h2" size="h1" weight="medium" className="text-center">
+        Blog
+      </Typography>
+      <Typography size="body" weight="regular" className="text-center">
+        Some recent posts
+      </Typography>
+      <div className="flex flex-col md:flex-row gap-5">
+        {posts.data.map((post) => (
+          <PostPreview key={post.id} post={post} />
+        ))}
+      </div>
     </div>
   )
 }

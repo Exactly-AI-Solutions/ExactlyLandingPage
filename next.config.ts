@@ -10,7 +10,20 @@ const nextConfig: NextConfig = {
     },
   },
   images: {
-    domains: ['127.0.0.1'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+      },
+      {
+        protocol: 'https',
+        hostname: 'deductive-team-415521.uc.r.appspot.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+      },
+    ],
   },
   webpack(config) {
     // Find the existing rule that handles SVG files and modify it

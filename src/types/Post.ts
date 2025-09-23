@@ -19,6 +19,7 @@ export interface IContentBlock {
 
 export interface IPost {
   id: number
+  readTime: number
   slug: string
   title: string
   date: string

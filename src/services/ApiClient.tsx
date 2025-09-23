@@ -1,3 +1,4 @@
+import { ISeo } from '@/components/Seo'
 import { IPagination } from '@/types/Pagination'
 import { IPost } from '@/types/Post'
 
@@ -13,6 +14,7 @@ class APIClient {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_KEY}`,
       },
     })
     if (!response.ok) {
@@ -46,6 +48,12 @@ export const getBlogPosts = async (): Promise<{
 }
 
 export const getBlogPostBySlug = async (slug: string): Promise<IPost> => {
-  const res = await api.get(`/blogs?filters[slug][$eq]=${slug}&populate[author]=true&populate[preview]=true&populate[relatedBlogs]=true`)
+  const res = await api.get(
+    `/blogs?filters[slug][$eq]=${slug}&populate[author]=true&populate[preview]=true&populate[relatedBlogs]=true`
+  )
   return res.data[0]
+}
+
+export const getSeo = async (): Promise<ISeo> => {
+  return api.get('/seo')
 }
