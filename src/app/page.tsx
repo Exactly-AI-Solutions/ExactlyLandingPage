@@ -13,9 +13,33 @@ import { QualificationCheck } from '@/components/QualificationCheck'
 import { QuestionsSection } from '@/components/QuestionsSection'
 import { RichInfoSection } from '@/components/RichInfoSection'
 import { WhyMettersSection } from '@/components/WhyMettersSection'
+import { getSeo } from '@/services/ApiClient'
+import { Metadata } from 'next'
 import { Suspense } from 'react'
 
-export default function Home() {
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getSeo()
+  const { title, description } = seo.data
+  return {
+    title,
+    description,
+  }
+}
+
+export default async function Home() {
+  const seo = await getSeo()
+  const { jsonLd } = seo.data
+
+  const jsonLds = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    id: `${jsonLd.url}/`,
+    legalName: jsonLd.name,
+    name: jsonLd.name,
+    sameAs: jsonLd.sameAs,
+    url: jsonLd.url,
+  }
+
   return (
     <>
       <HeroSection />
@@ -35,6 +59,12 @@ export default function Home() {
       <FAQs />
       <QuestionsSection />
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLds).replace(/</g, '\\u003c'),
+        }}
+      />
     </>
   )
 }

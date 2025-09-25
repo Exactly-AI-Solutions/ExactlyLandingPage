@@ -1,6 +1,6 @@
-import { ISeo } from '@/components/Seo'
 import { IPagination } from '@/types/Pagination'
 import { IPost } from '@/types/Post'
+import { ISeo } from '@/types/Seo'
 
 class APIClient {
   baseUrl: string
@@ -20,7 +20,7 @@ class APIClient {
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }
-    
+
     return response.json()
   }
 
@@ -55,6 +55,6 @@ export const getBlogPostBySlug = async (slug: string): Promise<IPost> => {
   return res.data[0]
 }
 
-export const getSeo = async (): Promise<ISeo> => {
+export const getSeo = async (): Promise<{ data: ISeo }> => {
   return api.get('/seo')
 }
