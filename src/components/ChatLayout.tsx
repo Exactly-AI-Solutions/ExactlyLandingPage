@@ -1,11 +1,23 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 
-export const ChatLayout = () => {
+function ChatContent() {
   const searchParams = useSearchParams()
   const message = searchParams.get('message')
-  const basicURLWithStyles = `${process.env.NEXT_PUBLIC_CHATBOT_URL}?primary=fff&primaryForeground=181c30&border=fff&inputBg=transparent&accent=FFB300&accentForeground=000`
+
+  const chatbotUrl = process.env.NEXT_PUBLIC_CHATBOT_URL
+
+  if (!chatbotUrl) {
+    return (
+      <div className="w-full h-dvh flex items-center justify-center">
+        <div>Chat service is not available</div>
+      </div>
+    )
+  }
+
+  const basicURLWithStyles = `${chatbotUrl}?primary=fff&primaryForeground=181c30&border=fff&inputBg=transparent&accent=FFB300&accentForeground=000`
 
   const iframeSrc = `${basicURLWithStyles}${
     message ? `&message=${encodeURIComponent(message)}` : ''
@@ -20,5 +32,13 @@ export const ChatLayout = () => {
         src={iframeSrc}
       ></iframe>
     </div>
+  )
+}
+
+export const ChatLayout = () => {
+  return (
+    <Suspense>
+      <ChatContent />
+    </Suspense>
   )
 }
