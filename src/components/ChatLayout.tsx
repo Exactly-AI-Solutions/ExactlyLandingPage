@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation'
 export const ChatLayout = () => {
   const searchParams = useSearchParams()
   const message = searchParams.get('message')
-  const basicURLWithStyles = `${process.env.NEXT_PUBLIC_CHATBOT_URL}?primary=ffb300&primaryForeground=181c30&border=6f6f6f&inputBg=fff`
+  const basicURLWithStyles = `${process.env.NEXT_PUBLIC_CHATBOT_URL}?primary=fff&primaryForeground=181c30&border=fff&inputBg=transparent&accent=FFB300&accentForeground=000`
 
   const iframeSrc = `${basicURLWithStyles}${
     message ? `&message=${encodeURIComponent(message)}` : ''
