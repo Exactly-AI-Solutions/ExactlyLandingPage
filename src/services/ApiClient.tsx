@@ -9,13 +9,14 @@ class APIClient {
     this.baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL || ''
   }
 
-  async get(endpoint: string) {
+  async get(endpoint: string, params?: Record<string, unknown>) {
     const response = await fetch(`${this.baseUrl}/api${endpoint}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_KEY}`,
       },
+      ...(params && params),
     })
     if (!response.ok) {
       throw new Error('Network response was not ok')
@@ -41,11 +42,19 @@ class APIClient {
 
 export const api = new APIClient()
 
-export const getBlogPosts = async (): Promise<{
+export const getBlogPosts = async (
+  getAll?: boolean,
+  params?: Record<string, unknown>
+): Promise<{
   data: IPost[]
   meta: { pagination: IPagination }
 }> => {
-  return api.get('/blogs?populate[author]=true&populate[preview]=true')
+  return api.get(
+    `/blogs?populate[author]=true&populate[preview]=true${
+      getAll ? '&pagination[pageSize]=-1' : ''
+    }`,
+    params
+  )
 }
 
 export const getBlogPostBySlug = async (slug: string): Promise<IPost> => {

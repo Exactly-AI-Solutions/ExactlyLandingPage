@@ -3,6 +3,12 @@ import { getBlogPosts } from '@/services/ApiClient'
 
 import { Typography } from '@/components/ui'
 
+export const metadata = {
+  title: 'The Complete Guide to Agentic AI for SMBs | Best AI Agent',
+  description:
+    'Discover how SMBs use agentic AI for growth. Real-world examples, no-code workflows, and pay-for-performance models — with guaranteed outcomes.',
+}
+
 export default async function BlogPage() {
   const posts = await getBlogPosts()
 
