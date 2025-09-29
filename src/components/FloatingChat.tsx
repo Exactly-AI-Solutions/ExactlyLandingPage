@@ -28,7 +28,7 @@ export const FloatingChat = () => {
   if (!isVisible) return null
 
   return (
-    <div className="w-full px-5 md:px-0 md:w-3/4 fixed bottom-5 left-1/2 transform -translate-x-1/2 z-500">
+    <div className="max-w-[80vw] md:max-w-[42vw] px-5 md:px-0 md:w-3/4 fixed bottom-5 left-1/2 transform -translate-x-1/2 z-500">
       <AIChat
         appearance="dark"
         placeholder="Start using our AI...ask any question..."

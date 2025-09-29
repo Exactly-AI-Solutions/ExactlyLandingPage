@@ -1,10 +1,4 @@
-import {
-  ChevronIcon,
-  Dark1Icon,
-  Dark2Icon,
-  Dark3Icon,
-  Dark4Icon,
-} from '../icons'
+import { Dark1Icon, Dark2Icon, Dark3Icon, Dark4Icon } from '../icons'
 import Typography from './Typography'
 
 interface Props {
@@ -37,7 +31,6 @@ export const Step = ({ stepNumber, title, description }: Props) => (
         </Typography>
         {getIcon(stepNumber)}
       </div>
-      <ChevronIcon width={20} height={20} fill="var(--color-blue-04)" />
     </div>
     <Typography size="bodyXL" weight="medium" className="mb-2">
       {title}

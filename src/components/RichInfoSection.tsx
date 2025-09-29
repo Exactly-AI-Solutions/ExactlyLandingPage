@@ -84,7 +84,7 @@ export const RichInfoSection = () => (
           <Typography size="h6" weight="semibold" className="mb-5">
             Perfect for:
           </Typography>
-          <div className="flex flex-col gap-5">
+          <div className="grid grid-cols-2 gap-4">
             <InfoCard
               icon={<FilterIcon />}
               text="Teams that need conversions now (not in 4-6 months)"
@@ -103,11 +103,11 @@ export const RichInfoSection = () => (
             />
           </div>
         </div>
-        <div className="w-full flex justify-center items-center">
+        {/* <div className="w-full flex justify-center items-center">
           <button className="w-[260px] h-[88px] flex justify-center items-center border-2 border-yellow-06 rounded-full">
             TRY OUR CHATBOT
           </button>
-        </div>
+        </div> */}
       </div>
       <Card className="flex flex-col items-center gap-5 p-10">
         <Typography size="h1" weight="medium" className="text-center">
@@ -121,9 +121,9 @@ export const RichInfoSection = () => (
         </Typography>
       </Card>
       <div className="flex justify-center gap-5 flex-col w-full">
-        <Button className="w-full md:w-[400px] m-auto">Find out more</Button>
+        <Button className="w-full md:w-[400px] m-auto">Experience Our Chatbot</Button>
         <Button hierarchy="primary-stroke" className="w-full md:w-[400px] m-auto">
-          Talk to our chatbot
+          Get Pricing For Your Site
         </Button>
       </div>
     </div>

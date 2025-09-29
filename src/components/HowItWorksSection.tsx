@@ -5,7 +5,7 @@ export const HowItWorksSection = () => (
     <Card>
       <div className="max-w-[720px] m-auto flex flex-col gap-5 justify-center items-center">
         <Typography as="h2" size="h1" weight="medium" className="text-center">
-          How it works
+          How It Works
         </Typography>
         <Typography size="body" weight="regular" className="text-center">
           Most companies still are still trying to learn AI, and figure out how

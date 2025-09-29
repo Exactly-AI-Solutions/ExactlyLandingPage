@@ -32,6 +32,12 @@ export const Footer = () => (
         <Typography size="bodyXL" weight="medium">
           HOW
         </Typography>
+        <Typography size="bodyXL" weight="medium">
+          LEARN
+        </Typography>
+        <Typography size="bodyXL" weight="medium">
+          CHATBOT
+        </Typography>
       </div>
       <form className="flex flex-col gap-5 w-full max-w-[366px]">
         <Typography size="h6" color="blue04" weight="semibold">
@@ -48,15 +54,27 @@ export const Footer = () => (
         Copyright © 2025 Exactly AI Solutions
       </Typography>
       <div className="flex justify-end gap-5">
-        <Typography color="slate07">Cookie Policy</Typography>
+        <a href="https://www.exactlyai.solutions/cookie-policy" target="_blank">
+          <Typography color="slate07">Cookie Policy</Typography>
+        </a>
         <Typography color="slate07" className="mx-2">
           |
         </Typography>
-        <Typography color="slate07">Privacy Policy</Typography>
+        <a
+          href="https://www.exactlyai.solutions/privacy-policy"
+          target="_blank"
+        >
+          <Typography color="slate07">Privacy Policy</Typography>
+        </a>
         <Typography color="slate07" className="mx-2">
           |
         </Typography>
-        <Typography color="slate07">Terms of Service</Typography>
+        <a
+          href="https://www.exactlyai.solutions/terms-of-service"
+          target="_blank"
+        >
+          <Typography color="slate07">Terms of Service</Typography>
+        </a>
       </div>
     </div>
   </div>

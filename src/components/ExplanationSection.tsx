@@ -4,7 +4,7 @@ export const ExplanationSection = () => (
   <div className="two-colors-background-reverse p-5 text-center">
     <Card>
       <Typography size="h1" weight="medium">
-        Why we can offer guarantees
+        Why We Can Offer Guarantees
       </Typography>
       <Typography color="slate07">
         Our AI agents learn from every client engagement, constantly improving

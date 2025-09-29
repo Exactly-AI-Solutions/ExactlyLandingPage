@@ -11,7 +11,7 @@ export const WhyMettersSection = () => (
   <div className="bg-slate-01 pt-32 md:pt-60 pb-32 md:px-5">
     <div className="container flex flex-col gap-10 justify-center items-center">
       <Typography as="h2" size="h1" weight="medium" className="text-center">
-        Why this Matters for you:
+        Why This Matters For You:
       </Typography>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <Explanation

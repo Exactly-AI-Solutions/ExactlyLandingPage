@@ -8,7 +8,7 @@ export const Header = () => (
     <nav className='hidden md:block'>
       <ul className="flex items-center justify-center gap-8">
         <li>
-          <Link href="/">
+          <Link href="/#why">
             <Typography size="bodyXL" color="white">
               Why
             </Typography>
@@ -28,8 +28,22 @@ export const Header = () => (
             </Typography>
           </Link>
         </li>
+        <li>
+          <Link href="/">
+            <Typography size="bodyXL" color="white">
+              Learn
+            </Typography>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <Typography size="bodyXL" color="white">
+              Chatbot
+            </Typography>
+          </Link>
+        </li>
       </ul>
     </nav>
-    <Button hierarchy="accented-bold">Start conversation</Button>
+    <Button hierarchy="accented-bold">Book Consulation</Button>
   </header>
 )
