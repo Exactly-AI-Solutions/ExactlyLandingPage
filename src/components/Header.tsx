@@ -15,28 +15,28 @@ export const Header = () => (
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/#what">
             <Typography size="bodyXL" color="white">
               What
             </Typography>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/#how">
             <Typography size="bodyXL" color="white">
               How
             </Typography>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/#learn">
             <Typography size="bodyXL" color="white">
               Learn
             </Typography>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/#chatbot">
             <Typography size="bodyXL" color="white">
               Chatbot
             </Typography>

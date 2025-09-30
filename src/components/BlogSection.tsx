@@ -6,7 +6,7 @@ export const BlogSection = async () => {
   const posts = await getBlogPosts()
 
   return (
-    <div className="two-colors-background p-5">
+    <div className="two-colors-background p-5" id="learn">
       <Card>
         <Typography as="h2" size="h1" weight="medium" className="text-center">
           Blog

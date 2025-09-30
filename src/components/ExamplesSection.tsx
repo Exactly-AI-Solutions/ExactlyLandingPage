@@ -10,7 +10,7 @@ import {
 } from './ui'
 
 export const ExamplesSection = () => (
-  <div className="bg-slate-01 py-32 md:py-60">
+  <div className="bg-slate-01 py-32 md:py-60" id="what">
     <div className="container">
       <Typography
         as="h2"

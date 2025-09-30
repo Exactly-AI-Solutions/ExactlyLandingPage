@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { EmailIcon, LinkedinIcon, Logo, PhoneCallIcon } from './icons'
 import { Button, Typography } from './ui'
 import { Input } from './ui/Input'
@@ -23,21 +24,31 @@ export const Footer = () => (
         <Typography size="h6" color="blue04" weight="semibold">
           Explore
         </Typography>
-        <Typography size="bodyXL" weight="medium">
-          WHY
-        </Typography>
-        <Typography size="bodyXL" weight="medium">
-          WHAT
-        </Typography>
-        <Typography size="bodyXL" weight="medium">
-          HOW
-        </Typography>
-        <Typography size="bodyXL" weight="medium">
-          LEARN
-        </Typography>
-        <Typography size="bodyXL" weight="medium">
-          CHATBOT
-        </Typography>
+        <Link href="/#why">
+          <Typography size="bodyXL" weight="medium">
+            WHY
+          </Typography>
+        </Link>
+        <Link href="/#what">
+          <Typography size="bodyXL" weight="medium">
+            WHAT
+          </Typography>
+        </Link>
+        <Link href="/#how">
+          <Typography size="bodyXL" weight="medium">
+            HOW
+          </Typography>
+        </Link>
+        <Link href="/#learn">
+          <Typography size="bodyXL" weight="medium">
+            LEARN
+          </Typography>
+        </Link>
+        <Link href="/#chatbot">
+          <Typography size="bodyXL" weight="medium">
+            CHATBOT
+          </Typography>
+        </Link>
       </div>
       <form className="flex flex-col gap-5 w-full max-w-[366px]">
         <Typography size="h6" color="blue04" weight="semibold">

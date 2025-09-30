@@ -130,6 +130,10 @@
   --color-orange-05: #ff8a00;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: white;
   color: var(--foreground);
