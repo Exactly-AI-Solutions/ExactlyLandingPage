@@ -84,7 +84,7 @@ export const RichInfoSection = () => (
           <Typography size="h6" weight="semibold" className="mb-5">
             Perfect for:
           </Typography>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <InfoCard
               icon={<FilterIcon />}
               text="Teams that need conversions now (not in 4-6 months)"

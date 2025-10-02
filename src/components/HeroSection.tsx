@@ -12,7 +12,7 @@ export const HeroSection = () => {
   return (
     <div className="min-h-dvh background-gradient grid grid-rows-[86px_1fr]">
       <Header />
-      <div className="container p-5 md:p-10 flex flex-col gap-20 justify-center items-center">
+      <div className="container py-5! px-5 md:p-10 flex flex-col gap-20 justify-center items-center">
         {!chatText ? (
           <>
             <div className="flex flex-col gap-5">

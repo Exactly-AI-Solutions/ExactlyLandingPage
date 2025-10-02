@@ -20,7 +20,7 @@ export const Footer = () => (
           <PhoneCallIcon width={32} height={32} fill="var(--color-blue-04)" />
         </div>
       </div>
-      <div className="flex md:flex-col gap-5">
+      <div className="flex flex-wrap md:flex-col gap-5">
         <Typography size="h6" color="blue04" weight="semibold">
           Explore
         </Typography>
