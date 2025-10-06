@@ -1,4 +1,3 @@
-import { AIChat } from './AIChat'
 import { Typography, Advantage } from './ui'
 
 export const MotivationSection = () => {
